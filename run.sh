@@ -19,6 +19,9 @@ if [ ! -f $kali_qcow ]; then
   	python3 -m py7zr x $archive_file
  	echo "Extraction complete!"
 	rm -f $archive_file
+ 	cp run.sh ..
+ 	cd ..
+  	rm -rf ctf-vm
 fi
 
 IMAGE_PATH=$kali_qcow
