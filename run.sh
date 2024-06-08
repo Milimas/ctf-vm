@@ -17,11 +17,11 @@ if [ ! -f $kali_qcow ]; then
 	
   	# Extract the archive using Python
   	echo "Extracting $archive_file"
-  	python3 -m py7zr x $archive_file $kali_qcow
+  	python3 -m py7zr x $archive_file $install_dir
  	echo "Extraction complete!"
 	rm -f $archive_file
-  	chmod u+x run.sh
  	cp run.sh ~/
+  	chmod u+x ~/run.sh
 fi
 
 IMAGE_PATH=$kali_qcow
