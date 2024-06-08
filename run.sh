@@ -1,7 +1,7 @@
 #!/bin/bash 
 
-archive_file="kali-linux-2024.2-qemu-amd64.7z"
-kali_qcow="kali-linux-2024.2-qemu-amd64.qcow2"
+archive_file="/goinfre/$USER/kali-linux-2024.2-qemu-amd64.7z"
+kali_qcow="/goinfre/$USER/kali-linux-2024.2-qemu-amd64.qcow2"
 
 if [ ! -f $kali_qcow ]; then
 	if [ ! -f $archive_file ]; then
