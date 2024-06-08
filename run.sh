@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-archive_file="/goinfre/$USER/kali-linux-2024.2-qemu-amd64.7z"
+install_dir="/goinfre/$USER/"
+archive_file="kali-linux-2024.2-qemu-amd64.7z"
 kali_qcow="/goinfre/$USER/kali-linux-2024.2-qemu-amd64.qcow2"
 
 if [ ! -f $kali_qcow ]; then
@@ -16,12 +17,10 @@ if [ ! -f $kali_qcow ]; then
 	
   	# Extract the archive using Python
   	echo "Extracting $archive_file"
-  	python3 -m py7zr x $archive_file
+  	python3 -m py7zr x $archive_file $install_dir$kali_qcow
  	echo "Extraction complete!"
 	rm -f $archive_file
- 	cp run.sh ..
- 	cd ..
-  	rm -rf ctf-vm
+ 	cp run.sh ~/
 fi
 
 IMAGE_PATH=$kali_qcow
@@ -42,4 +41,3 @@ qemu-system-x86_64 \
 -smp 20 \
 -daemonize \
 ${IMAGE_PATH}
-
