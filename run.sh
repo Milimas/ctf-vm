@@ -20,6 +20,7 @@ if [ ! -f $kali_qcow ]; then
   	python3 -m py7zr x $archive_file $kali_qcow
  	echo "Extraction complete!"
 	rm -f $archive_file
+  	chmod u+x run.sh
  	cp run.sh ~/
 fi
 
