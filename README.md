@@ -12,3 +12,9 @@ git clone https://github.com/Milimas/ctf-vm.git
 cd ctf-vm
 bash run.sh
 ```
+
+add 
+
+```
+echo "bash ~/goinfre/run.sh" >> ~/.profile
+```
