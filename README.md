@@ -10,5 +10,5 @@ A script to download and install Kali GNU/Linux using qemu.
 ```
 git clone https://github.com/Milimas/ctf-vm.git
 cd ctf-vm
-bash vm
+bash run.sh
 ```
