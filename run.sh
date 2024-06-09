@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-install_dir="/goinfre/$USER/"
+install_dir="/sgoinfre/$USER/"
 archive_file="kali-linux-2024.2-qemu-amd64.7z"
-kali_qcow="/goinfre/$USER/kali-linux-2024.2-qemu-amd64.qcow2"
+kali_qcow="/sgoinfre/$USER/kali-linux-2024.2-qemu-amd64.qcow2"
 
 if [ ! -f $kali_qcow ]; then
 	if [ ! -f $archive_file ]; then
